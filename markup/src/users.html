@@ -3,23 +3,21 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 	<meta charset="UTF-8">
-	<title>GPC Users</title>
+	<title>LocalFirst Users</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<!--SVG Sprite-->
 	<svg width="0" height="0" class="hidden">
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stats">
-	    <path  fill-rule="evenodd" d="M3 14l.5.07L8.07 9.5a1.95 1.95 0 0 1 .52-1.91c.78-.79 2.04-.79 2.82 0 .53.52.7 1.26.52 1.91l2.57 2.57.5-.07c.18 0 .35 0 .5.07l3.57-3.57C19 8.35 19 8.18 19 8a2 2 0 1 1 2 2c-.18 0-.35 0-.5-.07l-3.57 3.57c.07.15.07.32.07.5a2 2 0 1 1-4 0l.07-.5-2.57-2.57c-.32.07-.68.07-1 0L4.93 15.5 5 16a2 2 0 1 1-2-2z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="topics">
-	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
-	  </symbol>
+		<!--IconsSideBar-->
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="users">
 	    <path fill-rule="evenodd" d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM5.5 8A2.5 2.5 0 0 0 3 10.5c0 .94.53 1.75 1.29 2.18.36.2.77.32 1.21.32.44 0 .85-.12 1.21-.32.37-.21.68-.51.91-.87A5.42 5.42 0 0 1 6.5 8.5v-.28c-.3-.14-.64-.22-1-.22zm13 0c-.36 0-.7.08-1 .22v.28c0 1.2-.39 2.36-1.12 3.31.12.19.25.34.4.49a2.482 2.482 0 0 0 1.72.7c.44 0 .85-.12 1.21-.32.76-.43 1.29-1.24 1.29-2.18A2.5 2.5 0 0 0 18.5 8zM12 14c-2.34 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.66-3.5-7-3.5zm-7.29.55C2.78 14.78 0 15.76 0 17.5V19h3v-1.93c0-1.01.69-1.85 1.71-2.52zm14.58 0c1.02.67 1.71 1.51 1.71 2.52V19h3v-1.5c0-1.74-2.78-2.72-4.71-2.95zM12 16c1.53 0 3.24.5 4.23 1H7.77c.99-.5 2.7-1 4.23-1z"></path>
-	  </symbol> 
-		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="advertise">
-	    <path  fill-rule="evenodd" d="M12 8H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h3l5 4V4l-5 4zm3 7.6L13 14H4v-4h9l2-1.6v7.2zm6.5-3.6c0 1.71-.96 3.26-2.5 4V8c1.53.75 2.5 2.3 2.5 4z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="offers">
+	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stats">
+	    <path  fill-rule="evenodd" d="M3 14l.5.07L8.07 9.5a1.95 1.95 0 0 1 .52-1.91c.78-.79 2.04-.79 2.82 0 .53.52.7 1.26.52 1.91l2.57 2.57.5-.07c.18 0 .35 0 .5.07l3.57-3.57C19 8.35 19 8.18 19 8a2 2 0 1 1 2 2c-.18 0-.35 0-.5-.07l-3.57 3.57c.07.15.07.32.07.5a2 2 0 1 1-4 0l.07-.5-2.57-2.57c-.32.07-.68.07-1 0L4.93 15.5 5 16a2 2 0 1 1-2-2z"></path>
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="reports">
 	    <path  fill-rule="evenodd" d="M12 3L1 22h22M12 7l7.53 13H4.47M11 11v4h2v-4m-2 6v2h2v-2"></path>
@@ -27,6 +25,7 @@
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="logout">
 	    <path  d="M11.08 12.59L13.67 10H4V8h9.67l-2.59-2.59L12.5 4l5 5-5 5-1.42-1.41zM16 0a2 2 0 0 1 2 2v4.67l-2-2V2H2v14h14v-2.67l2-2V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .89.89 0 2 0h14z"></path>
 	  </symbol>	
+	  <!--IconsSideBar-->
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" id="filter">
 	    <path fill-rule="evenodd" d="M11.001 16.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-4.01-4.01a.989.989 0 0 1-.29-.83V7.75L.211 1.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4l-4.79 6.13v9.13zM3.041 2l3.96 5.06v5.52l2 2V7.05L12.961 2h-9.92z"></path>
 	  </symbol>
@@ -38,9 +37,6 @@
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" id="adduser">
 	    <path fill-rule="evenodd" d="M14 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 1.9a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2zM3 3v3H0v2h3v3h2V8h3V6H5V3H3zm11 6c-2.67 0-8 1.33-8 4v3h16v-3c0-2.67-5.33-4-8-4zm0 1.9c2.97 0 6.1 1.46 6.1 2.1v1.1H7.9V13c0-.64 3.1-2.1 6.1-2.1z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 15" id="addmoderator">
-	    <path fill-rule="evenodd" d="M8 11L6 0l5.5 7L15 0l3.5 7L24 0l-2 11H8zm14 3a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-1h14v1zM2.25 4h1.5v2.25H6v1.5H3.75V10h-1.5V7.75H0v-1.5h2.25V4z"></path>
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" id="export">
 	    <path fill-rule="evenodd" d="M10 0l6 6v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h8zm4 18V7H9V2H2v16h12zm-6-1l-4-4h2.5v-3h3v3H12l-4 4z"></path>
@@ -54,14 +50,7 @@
 	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="actions">
 	    <title>2EEB4AD0-C4AB-4A2D-8042-C772D482E2A9</title>
 	    <path fill-rule="evenodd" d="M20 24a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm0-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm0-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"></path>
-	  </symbol>
-	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="make-moder">
-	    <title>DE827D01-3718-44D7-99A2-51A43498FC97</title>
-	    <path fill-rule="evenodd" d="M13 24l-2-11 5.5 7 3.5-7 3.5 7 5.5-7-2 11H13zm14 3a1 1 0 0 1-1 1H14a1 1 0 0 1-1-1v-1h14v1z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 15" id="add-moder">
-	    <path fill-rule="evenodd" d="M8 11L6 0l5.5 7L15 0l3.5 7L24 0l-2 11H8zm14 3a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-1h14v1zM2.25 4h1.5v2.25H6v1.5H3.75V10h-1.5V7.75H0v-1.5h2.25V4z"></path>
-	  </symbol>	  
+	  </symbol> 
 	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="delete">
 	    <title>ACB6416B-36A8-4769-8C75-7D6F932FB1E9</title>
 	    <path fill-rule="evenodd" d="M14 27a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V15H14v12zm2.46-7.12l1.41-1.41L20 20.59l2.12-2.12 1.41 1.41L21.41 22l2.12 2.12-1.41 1.41L20 23.41l-2.12 2.12-1.41-1.41L18.59 22l-2.13-2.12zM23.5 12l-1-1h-5l-1 1H13v2h14v-2h-3.5z"></path>
@@ -73,15 +62,6 @@
 	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="user">
 	    <title>F016F53C-F61A-4D0C-BFD6-0981BBCBB81F</title>
 	    <path fill-rule="evenodd" d="M20 12a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 10c4.42 0 8 1.79 8 4v2H12v-2c0-2.21 3.58-4 8-4z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="verify">
-	    <path fill-rule="evenodd" d="M28.1 20.5l1.4 1.41-6.53 6.59L19.5 25l1.4-1.41 2.07 2.08 5.13-5.17zM17 25l3 3H10v-2c0-2.21 3.58-4 8-4l1.89.11L17 25zm1-13a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 14" id="verify-all">
-	    <path fill-rule="evenodd" d="M.41 8.41L6 14l1.41-1.42L1.83 7 .41 8.41zM22.24.58L11.66 11.17 7.5 7 6.07 8.41 11.66 14l12-12L22.24.58zM18 2L16.59.58l-6.35 6.35 1.42 1.41L18 2z"></path>
-	  </symbol>	  
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="decline">
-	    <path fill-rule="evenodd" d="M18.396 28H10v-2c0-2.67 5.33-4 8-4 .756 0 1.726.107 2.728.32L22.415 24l-4.019 4zM18 20a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm8 2.59l2.12-2.13 1.42 1.42L27.41 24l2.13 2.12-1.42 1.42L26 25.41l-2.12 2.13-1.42-1.42L24.59 24l-2.13-2.12 1.42-1.42L26 22.59z"></path>
 	  </symbol>
 	  <symbol viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg" id="filter_off">
 	    <title>800E0EB6-B40B-4C55-BF08-7F63E16D5BCD</title>
@@ -100,10 +80,8 @@
 	<main class="content--main">
 		<div id="tabs">
 		  <ul class="tabs--btns">
-		    <li><a class="btns" href="#tabs-1">Users</a></li>
-		    <li><a class="btns" href="#tabs-2">Moderators</a></li>
-		    <li><a class="btns" href="#tabs-3">Unverified</a><span class="notifications">4</span></li>
-		    <li><a class="btns" href="#tabs-4">No results (Test)</a></li>
+		    <li class="ui-state-active"><a class="btns" href="#tabs-1">Users</a></li>
+		    <li><a class="btns" href="#tabs-2">No results (Test)</a></li>
 		  </ul>
 		  <div id="tabs-1">
 		  	<div class="tabs--header clearfix">
@@ -139,6 +117,13 @@
 									</svg>
 		  					</button>
 							</li>
+		  				<li>
+		  					<a href="useradd.html" class="btns adduser_btn">
+			  					<svg class="icons icons24x24">
+	  								<use xlink:href="#adduser"></use>
+									</svg>
+		  					</a>
+							</li>
 		  			</ul>
 		  		</div>
 		  	</div>
@@ -153,32 +138,27 @@
 									</svg>
 			    			</button>
 							</div>
-			    		<div class="table--list_cell cell_type">
+			    		<div class="table--list_cell cell_business">
 			    			<button class="btns">
-			    				Type
+			    				Business Name
 				    			<svg class="icons icons24x24">
 	  								<use xlink:href="#sort-z-a"></use>
 									</svg>
 			    			</button>
 			    		</div>
-			    		<div class="table--list_cell cell_county">
+			    		<div class="table--list_cell cell_company">
 			    			<button class="btns">
-			    				County
+			    				Company ID
 			    			</button>
 			    		</div>
-			    		<div class="table--list_cell cell_imcnbmi">
+			    		<div class="table--list_cell cell_number">
 			    			<button class="btns">
-			    				IMC/ NBMI
+			    				VAT number/ CRO number
 			    			</button>
 			    		</div>
-			    		<div class="table--list_cell cell_practice">
+			    		<div class="table--list_cell cell_phone">
 			    			<button class="btns">
-			    				Practice
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_registered">
-			    			<button class="btns">
-			    				REGISTERED
+			    				Phone Number
 			    			</button>
 			    		</div>
 			    		<div class="table--list_cell cell--filter">
@@ -195,33 +175,13 @@
 			    	<div class="table--list_row filter-row">
 			    		<div class="table--list_cell cell_user">
 							</div>
-			    		<div class="table--list_cell cell_type">
-			    			<select>
-			    				<option>GP Trainee</option>
-			    				<option>Practice Nurse</option>
-			    				<option>Other</option>
-			    				<option>Locum</option>
-			    			</select>
+			    		<div class="table--list_cell cell_business">
 			    		</div>
-			    		<div class="table--list_cell cell_county">
-			    			<select>
-			    				<option>Londonderry</option>
-			    				<option>Londonderry 2</option>
-			    				<option>Londonderry 3</option>
-			    				<option>Londonderry 3</option>
-			    			</select>
+			    		<div class="table--list_cell cell_company">
 			    		</div>
-			    		<div class="table--list_cell cell_imcnbmi">
+			    		<div class="table--list_cell cell_number">
 			    		</div>
-			    		<div class="table--list_cell cell_practice">
-			    		</div>
-			    		<div class="table--list_cell cell_registered">
-			    			<button class="btns">
-			    				<svg class="icons icons24x24">
-									  <use xlink:href="#date"></use>
-									</svg>
-									aLL
-			    			</button>
+			    		<div class="table--list_cell cell_phone">
 			    		</div>
 			    		<div class="table--list_cell cell--filter">
 			    		</div>
@@ -230,11 +190,10 @@
 		    	<div class="table--list_body">
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -245,14 +204,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#make-moder"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -263,16 +215,12 @@
 			    	</div>
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">
-			    			Lew Silverton 
-		    				<svg class="icons icons24x24">
-								  <use xlink:href="#make-moder"></use>
-								</svg>
+			    			Lew Silverton
 			    		</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -283,14 +231,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#user"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -301,11 +242,10 @@
 			    	</div>
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -316,14 +256,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#make-moder"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -334,11 +267,10 @@
 			    	</div>
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -349,14 +281,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#make-moder"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -367,11 +292,10 @@
 			    	</div>
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -382,14 +306,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#make-moder"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -400,11 +317,10 @@
 			    	</div>
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -415,14 +331,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#make-moder"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -433,11 +342,10 @@
 			    	</div>
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -448,14 +356,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#make-moder"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -466,11 +367,10 @@
 			    	</div>
 			    	<div class="table--list_row">
 			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
+			    		<div class="table--list_cell cell_business">GP divainee</div>
+			    		<div class="table--list_cell cell_company">Londonderry</div>
+			    		<div class="table--list_cell cell_number">12345678901</div>
+			    		<div class="table--list_cell cell_phone">Practice Name</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
@@ -481,14 +381,7 @@
 										</button>
 									</li>
 									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#make-moder"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
+										<a class="btns edit_btn" href="useredit.html">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -501,468 +394,6 @@
 		    </div>
 		  </div>
 		  <div id="tabs-2">
-		  	<div class="tabs--header clearfix">
-		  		<div class="tabs--header_search clearfix">
-		  			<button  class="tabs--header_search-show">
-		  				<svg class="icons icons24x24">
-								<use xlink:href="#search"></use>
-							</svg>
-			  		</button>
-			  		<form class="tabs--header_search-form">
-			  			<input class="tabs--header_search-input" type="text" name="search" placeholder="Search for user, email or practice">
-			  			<button class="tabs--header_search-submit" type="submit" value="">
-			  				<svg class="icons icons24x24">
-	  							<use xlink:href="#search"></use>
-								</svg>
-							</button>
-							<button  class="tabs--header_search-clear">
-								<svg class="icons icons24x24">
-							  	<use xlink:href="#search-clear"></use>
-								</svg>
-							</button>
-			  		</form>
-			  		<div class="tabs--header_search-count">
-			  			209 Users
-			  		</div>
-		  		</div>
-		  		<div class="tabs--header_menu">
-		  			<ul>
-		  				<li>
-		  					<button class="btns export_btn">
-			  					<svg class="icons icons24x24">
-	  								<use xlink:href="#export"></use>
-									</svg>
-		  					</button>
-							</li>
-		  				<li>
-		  					<button class="btns export_btn" data-toggle="class" data-target="#popups" data-classes="moderatoradd">
-			  					<svg class="icons icons24x24">
-	  								<use xlink:href="#add-moder"></use>
-									</svg>
-		  					</button>
-							</li>
-		  			</ul>
-		  		</div>
-		  	</div>
-		    <div class="table--list users--tables">
-		    	<div class="table--list_header">
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user active">
-			    			<button class="btns">
-				    			User 
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-a-z"></use>
-									</svg>
-			    			</button>
-							</div>
-			    		<div class="table--list_cell cell_type">
-			    			<button class="btns">
-			    				Type
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-z-a"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_county">
-			    			<button class="btns">
-			    				County
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_imcnbmi">
-			    			<button class="btns">
-			    				IMC/ NBMI
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_practice">
-			    			<button class="btns">
-			    				Practice
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_registered">
-			    			<button class="btns">
-			    				REGISTERED
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell--filter">
-			    			<button class="btns filter_btn">
-				    			<svg class="icons icons24x24 on">
-		  							<use xlink:href="#filter"></use>
-									</svg>
-				    			<svg class="icons icons24x24 off">
-		  							<use xlink:href="#filter_off"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    	</div>
-			    	<div class="table--list_row filter-row">
-			    		<div class="table--list_cell cell_user active">
-							</div>
-			    		<div class="table--list_cell cell_type">
-			    			<select>
-			    				<option>GP Trainee</option>
-			    				<option>Practice Nurse</option>
-			    				<option>Other</option>
-			    				<option>Locum</option>
-			    			</select>
-			    		</div>
-			    		<div class="table--list_cell cell_county">
-			    			<select>
-			    				<option>Londonderry</option>
-			    				<option>Londonderry 2</option>
-			    				<option>Londonderry 3</option>
-			    				<option>Londonderry 3</option>
-			    			</select>
-			    		</div>
-			    		<div class="table--list_cell cell_imcnbmi">
-			    		</div>
-			    		<div class="table--list_cell cell_practice">
-			    		</div>
-			    		<div class="table--list_cell cell_registered">
-			    			<button class="btns">
-			    				<svg class="icons icons24x24">
-									  <use xlink:href="#date"></use>
-									</svg>
-									aLL
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell--filter">
-			    		</div>
-			    	</div>
-		    	</div>
-		    	<div class="table--list_body">
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
-			    		<div class="table--list_cell cell--editor">
-			    			<ul class="cell--editor_menu">
-									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">
-					    				<svg class="icons icons40x40">
-		  									<use xlink:href="#delete"></use>
-											</svg>
-										</button>
-									</li>
-									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#user"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#edit"></use>
-											</svg>
-										</a>
-									</li>
-								</ul>
-			    		</div>
-			    	</div>
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
-			    		<div class="table--list_cell cell--editor">
-			    			<ul class="cell--editor_menu">
-									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">
-					    				<svg class="icons icons40x40">
-		  									<use xlink:href="#delete"></use>
-											</svg>
-										</button>
-									</li>
-									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#user"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#edit"></use>
-											</svg>
-										</a>
-									</li>
-								</ul>
-			    		</div>
-			    	</div>
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
-			    		<div class="table--list_cell cell--editor">
-			    			<ul class="cell--editor_menu">
-									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">
-					    				<svg class="icons icons40x40">
-		  									<use xlink:href="#delete"></use>
-											</svg>
-										</button>
-									</li>
-									<li>
-										<buttons class="btns moder_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#user"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#edit"></use>
-											</svg>
-										</a>
-									</li>
-								</ul>
-			    		</div>
-			    	</div>
-		   		</div>
-		    </div>
-		  </div>
-		  <div id="tabs-3">
-		  	<div class="tabs--header clearfix">
-		  		<div class="tabs--header_search clearfix">
-		  			<button  class="tabs--header_search-show">
-		  				<svg class="icons icons24x24">
-								<use xlink:href="#search"></use>
-							</svg>
-			  		</button>
-			  		<form class="tabs--header_search-form">
-			  			<input class="tabs--header_search-input" type="text" name="search" placeholder="Search for user, email or practice">
-			  			<button class="tabs--header_search-submit" type="submit" value="">
-			  				<svg class="icons icons24x24">
-	  							<use xlink:href="#search"></use>
-								</svg>
-							</button>
-							<button  class="tabs--header_search-clear">
-								<svg class="icons icons24x24">
-							  	<use xlink:href="#search-clear"></use>
-								</svg>
-							</button>
-			  		</form>
-			  		<div class="tabs--header_search-count">
-			  			209 Users
-			  		</div>
-		  		</div>
-		  		<div class="tabs--header_menu">
-		  			<ul>
-		  				<li>
-		  					<button class="btns verify-all_btn">
-		  						Verify all
-		  					</button>
-							</li>
-		  				<li>
-		  					<button class="btns verify_btn">
-			  					<svg class="icons icons24x24">
-	  								<use xlink:href="#verify-all"></use>
-									</svg>
-		  					</button>
-							</li>
-		  			</ul>
-		  		</div>
-		  	</div>
-		    <div class="table--list users--tables">
-		    	<div class="table--list_header">
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user active">
-			    			<button class="btns">
-				    			User 
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-a-z"></use>
-									</svg>
-			    			</button>
-							</div>
-			    		<div class="table--list_cell cell_type">
-			    			<button class="btns">
-			    				Type
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-z-a"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_county">
-			    			<button class="btns">
-			    				County
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_imcnbmi">
-			    			<button class="btns">
-			    				IMC/ NBMI
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_practice">
-			    			<button class="btns">
-			    				Practice
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_registered">
-			    			<button class="btns">
-			    				REGISTERED
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell--filter">
-			    			<button class="btns filter_btn">
-				    			<svg class="icons icons24x24 on">
-		  							<use xlink:href="#filter"></use>
-									</svg>
-				    			<svg class="icons icons24x24 off">
-		  							<use xlink:href="#filter_off"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    	</div>
-			    	<div class="table--list_row filter-row">
-			    		<div class="table--list_cell cell_user active">
-							</div>
-			    		<div class="table--list_cell cell_type">
-			    			<select>
-			    				<option>GP Trainee</option>
-			    				<option>Practice Nurse</option>
-			    				<option>Other</option>
-			    				<option>Locum</option>
-			    			</select>
-			    		</div>
-			    		<div class="table--list_cell cell_county">
-			    			<select>
-			    				<option>Londonderry</option>
-			    				<option>Londonderry 2</option>
-			    				<option>Londonderry 3</option>
-			    				<option>Londonderry 3</option>
-			    			</select>
-			    		</div>
-			    		<div class="table--list_cell cell_imcnbmi">
-			    		</div>
-			    		<div class="table--list_cell cell_practice">
-			    		</div>
-			    		<div class="table--list_cell cell_registered">
-			    			<button class="btns">
-			    				<svg class="icons icons24x24">
-									  <use xlink:href="#date"></use>
-									</svg>
-									aLL
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell--filter">
-			    		</div>
-			    	</div>
-		    	</div>
-		    	<div class="table--list_body">
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
-			    		<div class="table--list_cell cell--editor">
-			    			<ul class="cell--editor_menu">
-									<li>
-										<buttons class="btns decline_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#decline"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<buttons class="btns verify_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#verify"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#edit"></use>
-											</svg>
-										</a>
-									</li>
-								</ul>
-			    		</div>
-			    	</div>
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
-			    		<div class="table--list_cell cell--editor">
-			    			<ul class="cell--editor_menu">
-									<li>
-										<buttons class="btns decline_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#decline"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<buttons class="btns verify_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#verify"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#edit"></use>
-											</svg>
-										</a>
-									</li>
-								</ul>
-			    		</div>
-			    	</div>
-			    	<div class="table--list_row">
-			    		<div class="table--list_cell cell_user">Lew Silverton</div>
-			    		<div class="table--list_cell cell_type">GP divainee</div>
-			    		<div class="table--list_cell cell_county">Londonderry</div>
-			    		<div class="table--list_cell cell_imcnbmi">12345678901</div>
-			    		<div class="table--list_cell cell_practice">Practice Name</div>
-			    		<div class="table--list_cell cell_registered">01/07/19</div>
-			    		<div class="table--list_cell cell--editor">
-			    			<ul class="cell--editor_menu">
-									<li>
-										<buttons class="btns decline_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#decline"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<buttons class="btns verify_btn">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#verify"></use>
-											</svg>
-										</buttons>
-									</li>
-									<li>
-										<a class="btns edit_btn" href="edituser.html">
-											<svg class="icons icons40x40">
-		  									<use xlink:href="#edit"></use>
-											</svg>
-										</a>
-									</li>
-								</ul>
-			    		</div>
-			    	</div>
-		   		</div>
-		    </div>
-		  </div>
-		  <div id="tabs-4">
 		  	<div class="tabs--header clearfix">
 		  		<div class="tabs--header_search clearfix">
 		  			<button  class="tabs--header_search-show">
@@ -1010,42 +441,24 @@
 									</svg>
 			    			</button>
 							</div>
-			    		<div class="table--list_cell cell_email">
+			    		<div class="table--list_cell cell_business">
 			    			<button class="btns">
-			    				Email
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-a-z"></use>
-									</svg>
+			    				Business Name
 			    			</button>
 			    		</div>
-			    		<div class="table--list_cell cell_type">
+			    		<div class="table--list_cell cell_company">
 			    			<button class="btns">
-			    				Type
+			    				Company ID
 			    			</button>
 			    		</div>
-			    		<div class="table--list_cell cell_county">
+			    		<div class="table--list_cell cell_number">
 			    			<button class="btns">
-			    				County
+			    				VAT number/ CRO number
 			    			</button>
 			    		</div>
-			    		<div class="table--list_cell cell_practice">
+			    		<div class="table--list_cell cell_phone">
 			    			<button class="btns">
-			    				Practice
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_joined">
-			    			<button class="btns">
-			    				Joined
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_lastlogin">
-			    			<button class="btns">
-			    				Last Login
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_logins">
-			    			<button class="btns">
-			    				Logins
+			    				Phone Number
 			    			</button>
 			    		</div>
 			    		<div class="table--list_cell cell--filter">
@@ -1084,27 +497,27 @@
 	<!--Sidebar Main-->	
 	<aside class="sidebar--main">
 		<div class="sidebar--logo">
-			<a class="btns" href="#" title="home"><i class="logo"></i></a>
+			<a class="btns" href="index.html" title="home"><i class="logo"></i></a>
 		</div>
 		<ul class="sidebar--menu">
-			<li>
-				<a class="btns" href="stats.html" title="Stats">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#stats"></use>
-					</svg>
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="topics.html" title="Topics">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#topics"></use>
-					</svg>					
-				</a>
-			</li>
 			<li class="active">
 				<a class="btns" href="users.html" title="Users">
 					<svg class="icons icons48x48">
 					  <use xlink:href="#users"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="offers.html" title="Offers">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#offers"></use>
+					</svg>					
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="stats.html" title="Stats">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#stats"></use>
 					</svg>
 				</a>
 			</li>
@@ -1115,13 +528,6 @@
 					</svg>
 				</a>
 				<span>!</span>
-			</li>
-			<li>
-				<a class="btns" href="advertise.html" title="Advertise">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#advertise"></use>
-					</svg>					
-				</a>
 			</li>
 			<li class="separator">
 			</li>
@@ -1138,7 +544,7 @@
 	<!--Footer Main-->		
 	<footer class="footer--main clearfix">
 		<div class="footer--copyrights">
-			© 2019 DermaBuddy All rights reserved.
+			© 2019 LocalFirst All rights reserved.
 		</div>
 		<div class="footer--development">
 			Design and Developed by <a class="footer--logo_devensis" href="#"></a>
@@ -1159,23 +565,6 @@
 				<div class="form--row form--row_submit">
 					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">CANCEL</buttons>
 					<buttons class="btns delete_btn">DELeTE</buttons>
-				</div>
-			</form>
-		</div>
-		<div class="popup_block popup--moderatoradd">
-			<div class="popup--title">
-				Give moderator rights to
-			</div>
-			<form class="form--default">
-				<div class="popup--content form_search">
-					<input class="popup--content_input" type="text" name="user_search" placeholder="User name">
-					<svg class="icons icons24x24">
-						<use xlink:href="#search"></use>
-					</svg>
-				</div>
-				<div class="form--row form--row_submit">
-					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="moderatoradd">CANCEL</buttons>
-					<buttons class="btns submit_btn">SAVE CHANGES</buttons>
 				</div>
 			</form>
 		</div>

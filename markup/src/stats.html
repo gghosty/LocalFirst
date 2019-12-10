@@ -3,36 +3,29 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 	<meta charset="UTF-8">
-	<title>GPC Statistics</title>
+	<title>LocalFirst Statistics</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<!--SVG Sprite-->
 	<svg width="0" height="0" class="hidden">
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stats">
-	    <path  fill-rule="evenodd" d="M3 14l.5.07L8.07 9.5a1.95 1.95 0 0 1 .52-1.91c.78-.79 2.04-.79 2.82 0 .53.52.7 1.26.52 1.91l2.57 2.57.5-.07c.18 0 .35 0 .5.07l3.57-3.57C19 8.35 19 8.18 19 8a2 2 0 1 1 2 2c-.18 0-.35 0-.5-.07l-3.57 3.57c.07.15.07.32.07.5a2 2 0 1 1-4 0l.07-.5-2.57-2.57c-.32.07-.68.07-1 0L4.93 15.5 5 16a2 2 0 1 1-2-2z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="topics">
-	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
-	  </symbol>
+		<!--IconsSideBar-->
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="users">
 	    <path fill-rule="evenodd" d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM5.5 8A2.5 2.5 0 0 0 3 10.5c0 .94.53 1.75 1.29 2.18.36.2.77.32 1.21.32.44 0 .85-.12 1.21-.32.37-.21.68-.51.91-.87A5.42 5.42 0 0 1 6.5 8.5v-.28c-.3-.14-.64-.22-1-.22zm13 0c-.36 0-.7.08-1 .22v.28c0 1.2-.39 2.36-1.12 3.31.12.19.25.34.4.49a2.482 2.482 0 0 0 1.72.7c.44 0 .85-.12 1.21-.32.76-.43 1.29-1.24 1.29-2.18A2.5 2.5 0 0 0 18.5 8zM12 14c-2.34 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.66-3.5-7-3.5zm-7.29.55C2.78 14.78 0 15.76 0 17.5V19h3v-1.93c0-1.01.69-1.85 1.71-2.52zm14.58 0c1.02.67 1.71 1.51 1.71 2.52V19h3v-1.5c0-1.74-2.78-2.72-4.71-2.95zM12 16c1.53 0 3.24.5 4.23 1H7.77c.99-.5 2.7-1 4.23-1z"></path>
-	  </symbol> 
-		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="advertise">
-	    <path  fill-rule="evenodd" d="M12 8H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h3l5 4V4l-5 4zm3 7.6L13 14H4v-4h9l2-1.6v7.2zm6.5-3.6c0 1.71-.96 3.26-2.5 4V8c1.53.75 2.5 2.3 2.5 4z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="offers">
+	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stats">
+	    <path  fill-rule="evenodd" d="M3 14l.5.07L8.07 9.5a1.95 1.95 0 0 1 .52-1.91c.78-.79 2.04-.79 2.82 0 .53.52.7 1.26.52 1.91l2.57 2.57.5-.07c.18 0 .35 0 .5.07l3.57-3.57C19 8.35 19 8.18 19 8a2 2 0 1 1 2 2c-.18 0-.35 0-.5-.07l-3.57 3.57c.07.15.07.32.07.5a2 2 0 1 1-4 0l.07-.5-2.57-2.57c-.32.07-.68.07-1 0L4.93 15.5 5 16a2 2 0 1 1-2-2z"></path>
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="reports">
 	    <path  fill-rule="evenodd" d="M12 3L1 22h22M12 7l7.53 13H4.47M11 11v4h2v-4m-2 6v2h2v-2"></path>
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="logout">
 	    <path  d="M11.08 12.59L13.67 10H4V8h9.67l-2.59-2.59L12.5 4l5 5-5 5-1.42-1.41zM16 0a2 2 0 0 1 2 2v4.67l-2-2V2H2v14h14v-2.67l2-2V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .89.89 0 2 0h14z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="likes">
-	    <path d="M12.1 18.55l-.1.1-.11-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05zM16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5 22 5.41 19.58 3 16.5 3z"></path>
-	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="replies">
-	    <path d="M18 4v8a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zM4 13.17L5.17 12H16V4H4v9.17zM20 6a2 2 0 0 1 2 2v14l-4-4H8a2 2 0 0 1-2-2h12.83L20 17.17V6z"></path>
-	  </symbol>
+	  </symbol>	
+	  <!--IconsSideBar-->
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="views">
 	    <path d="M12 9.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM12 5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5s-9.27-3.11-11-7.5C2.73 8.11 7 5 12 5zm-8.82 7.5a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0z"></path>
 	  </symbol>	  
@@ -62,39 +55,31 @@
 		  	<div class="table--list statistics--tables">
 		  		<div class="table--list_header">
 		  			<div class="table--list_row">
-		  				<div class="table--list_cell cell-title">
+		  				<div class="table--list_cell cell_title">
 			    			<button class="btns">
 				    			TOTAL:
 			    			</button>
 							</div>
-			    		<div class="table--list_cell cell-topics">
+			    		<div class="table--list_cell cell_users">
 			    			<button class="btns">
 			    				<svg class="icons icons24x24">
-	  								<use xlink:href="#topics"></use>
+	  								<use xlink:href="#users"></use>
 									</svg>
 			    			</button>
 			    			<span class="table--list_header-total">32323</span>
 			    		</div>
-			    		<div class="table--list_cell cell-views">
+			    		<div class="table--list_cell cell_offers">
+			    			<button class="btns">
+			    				<svg class="icons icons24x24">
+	  								<use xlink:href="#offers"></use>
+									</svg>
+			    			</button>
+			    			<span class="table--list_header-total">32323</span>
+			    		</div>
+			    		<div class="table--list_cell cell_views">
 			    			<button class="btns">
 			    				<svg class="icons icons24x24">
 	  								<use xlink:href="#views"></use>
-									</svg>
-			    			</button>
-			    			<span class="table--list_header-total">32323</span>
-			    		</div>
-			    		<div class="table--list_cell cell-replies">
-			    			<button class="btns">
-			    				<svg class="icons icons24x24">
-	  								<use xlink:href="#replies"></use>
-									</svg>
-			    			</button>
-			    			<span class="table--list_header-total">32323</span>
-			    		</div>
-			    		<div class="table--list_cell cell-likes">
-			    			<button class="btns">
-			    				<svg class="icons icons24x24">
-	  								<use xlink:href="#likes"></use>
 									</svg>
 			    			</button>
 			    			<span class="table--list_header-total">32323</span>
@@ -103,63 +88,55 @@
 		  		</div>
 		  		<div class="table--list_body">
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">July</div>
-			    		<div class="table--list_cell cell-topics">232</div>
-			    		<div class="table--list_cell cell-views">232</div>
-			    		<div class="table--list_cell cell-replies">75</div>
-			    		<div class="table--list_cell cell-likes">130</div>		
+			    		<div class="table--list_cell cell_title">July</div>
+			    		<div class="table--list_cell cell_users">232</div>
+			    		<div class="table--list_cell cell_offers">232</div>
+			    		<div class="table--list_cell cell_views">75</div>	
 			    	</div>
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">June</div>
-			    		<div class="table--list_cell cell-topics">2232</div>
-			    		<div class="table--list_cell cell-views">2322</div>
-			    		<div class="table--list_cell cell-replies">725</div>
-			    		<div class="table--list_cell cell-likes">1320</div>		
+			    		<div class="table--list_cell cell_title">June</div>
+			    		<div class="table--list_cell cell_users">2232</div>
+			    		<div class="table--list_cell cell_offers">2322</div>
+			    		<div class="table--list_cell cell_views">725</div>	
 			    	</div>
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">may</div>
-			    		<div class="table--list_cell cell-topics">2332</div>
-			    		<div class="table--list_cell cell-views">2332</div>
-			    		<div class="table--list_cell cell-replies">325</div>
-			    		<div class="table--list_cell cell-likes">320</div>		
+			    		<div class="table--list_cell cell_title">may</div>
+			    		<div class="table--list_cell cell_users">2332</div>
+			    		<div class="table--list_cell cell_offers">2332</div>
+			    		<div class="table--list_cell cell_views">325</div>	
 			    	</div>
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">april</div>
-			    		<div class="table--list_cell cell-topics">4332</div>
-			    		<div class="table--list_cell cell-views">5332</div>
-			    		<div class="table--list_cell cell-replies">1325</div>
-			    		<div class="table--list_cell cell-likes">820</div>		
+			    		<div class="table--list_cell cell_title">april</div>
+			    		<div class="table--list_cell cell_users">4332</div>
+			    		<div class="table--list_cell cell_offers">5332</div>
+			    		<div class="table--list_cell cell_views">1325</div>	
 			    	</div>
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">march</div>
-			    		<div class="table--list_cell cell-topics">14332</div>
-			    		<div class="table--list_cell cell-views">5332</div>
-			    		<div class="table--list_cell cell-replies">1325</div>
-			    		<div class="table--list_cell cell-likes">1820</div>		
+			    		<div class="table--list_cell cell_title">march</div>
+			    		<div class="table--list_cell cell_users">14332</div>
+			    		<div class="table--list_cell cell_offers">5332</div>
+			    		<div class="table--list_cell cell_views">1325</div>	
 			    	</div>
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">february</div>
-			    		<div class="table--list_cell cell-topics">24332</div>
-			    		<div class="table--list_cell cell-views">3332</div>
-			    		<div class="table--list_cell cell-replies">2325</div>
-			    		<div class="table--list_cell cell-likes">5820</div>		
+			    		<div class="table--list_cell cell_title">february</div>
+			    		<div class="table--list_cell cell_users">24332</div>
+			    		<div class="table--list_cell cell_offers">3332</div>
+			    		<div class="table--list_cell cell_views">2325</div>	
 			    	</div>
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">january</div>
-			    		<div class="table--list_cell cell-topics">24332</div>
-			    		<div class="table--list_cell cell-views">3332</div>
-			    		<div class="table--list_cell cell-replies">2325</div>
-			    		<div class="table--list_cell cell-likes">5820</div>		
+			    		<div class="table--list_cell cell_title">january</div>
+			    		<div class="table--list_cell cell_users">24332</div>
+			    		<div class="table--list_cell cell_offers">3332</div>
+			    		<div class="table--list_cell cell_views">2325</div>	
 			    	</div>
 			    	<div class="table--list_row statistics--table_year">
-			    		<div class="table--list_cell cell-year">2018</div>
+			    		<div class="table--list_cell cell_year">2018</div>
 			    	</div>
 			    	<div class="table--list_row statistics--table_stat">
-			    		<div class="table--list_cell cell-title">december</div>
-			    		<div class="table--list_cell cell-topics">54332</div>
-			    		<div class="table--list_cell cell-views">5332</div>
-			    		<div class="table--list_cell cell-replies">5325</div>
-			    		<div class="table--list_cell cell-likes">9820</div>		
+			    		<div class="table--list_cell cell_title">december</div>
+			    		<div class="table--list_cell cell_users">54332</div>
+			    		<div class="table--list_cell cell_offers">5332</div>
+			    		<div class="table--list_cell cell_views">5325</div>	
 			    	</div>	  			
 		  		</div>
 		  	</div>
@@ -170,27 +147,27 @@
 	<!--Sidebar Main-->	
 	<aside class="sidebar--main">
 		<div class="sidebar--logo">
-			<a class="btns" href="#" title="home"><i class="logo"></i></a>
+			<a class="btns" href="index.html" title="home"><i class="logo"></i></a>
 		</div>
 		<ul class="sidebar--menu">
-			<li class="active">
-				<a class="btns" href="stats.html" title="Stats">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#stats"></use>
-					</svg>
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="topics.html" title="Topics">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#topics"></use>
-					</svg>					
-				</a>
-			</li>
 			<li>
 				<a class="btns" href="users.html" title="Users">
 					<svg class="icons icons48x48">
 					  <use xlink:href="#users"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="offers.html" title="Offers">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#offers"></use>
+					</svg>					
+				</a>
+			</li>
+			<li class="active">
+				<a class="btns" href="stats.html" title="Stats">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#stats"></use>
 					</svg>
 				</a>
 			</li>
@@ -201,13 +178,6 @@
 					</svg>
 				</a>
 				<span>!</span>
-			</li>
-			<li>
-				<a class="btns" href="advertise.html" title="Advertise">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#advertise"></use>
-					</svg>					
-				</a>
 			</li>
 			<li class="separator">
 			</li>
@@ -224,7 +194,7 @@
 	<!--Footer Main-->		
 	<footer class="footer--main clearfix">
 		<div class="footer--copyrights">
-			© 2019 GPC All rights reserved.
+			© 2019 LocalFirst All rights reserved.
 		</div>
 		<div class="footer--development">
 			Design and Developed by <a class="footer--logo_devensis" href="#"></a>

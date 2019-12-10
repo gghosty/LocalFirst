@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<title>LocalFirst New User</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<!--SVG Sprite-->
+	<svg width="0" height="0" class="hidden">
+		<!--IconsSideBar-->
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="users">
+	    <path fill-rule="evenodd" d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM5.5 8A2.5 2.5 0 0 0 3 10.5c0 .94.53 1.75 1.29 2.18.36.2.77.32 1.21.32.44 0 .85-.12 1.21-.32.37-.21.68-.51.91-.87A5.42 5.42 0 0 1 6.5 8.5v-.28c-.3-.14-.64-.22-1-.22zm13 0c-.36 0-.7.08-1 .22v.28c0 1.2-.39 2.36-1.12 3.31.12.19.25.34.4.49a2.482 2.482 0 0 0 1.72.7c.44 0 .85-.12 1.21-.32.76-.43 1.29-1.24 1.29-2.18A2.5 2.5 0 0 0 18.5 8zM12 14c-2.34 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.66-3.5-7-3.5zm-7.29.55C2.78 14.78 0 15.76 0 17.5V19h3v-1.93c0-1.01.69-1.85 1.71-2.52zm14.58 0c1.02.67 1.71 1.51 1.71 2.52V19h3v-1.5c0-1.74-2.78-2.72-4.71-2.95zM12 16c1.53 0 3.24.5 4.23 1H7.77c.99-.5 2.7-1 4.23-1z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="offers">
+	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stats">
+	    <path  fill-rule="evenodd" d="M3 14l.5.07L8.07 9.5a1.95 1.95 0 0 1 .52-1.91c.78-.79 2.04-.79 2.82 0 .53.52.7 1.26.52 1.91l2.57 2.57.5-.07c.18 0 .35 0 .5.07l3.57-3.57C19 8.35 19 8.18 19 8a2 2 0 1 1 2 2c-.18 0-.35 0-.5-.07l-3.57 3.57c.07.15.07.32.07.5a2 2 0 1 1-4 0l.07-.5-2.57-2.57c-.32.07-.68.07-1 0L4.93 15.5 5 16a2 2 0 1 1-2-2z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="reports">
+	    <path  fill-rule="evenodd" d="M12 3L1 22h22M12 7l7.53 13H4.47M11 11v4h2v-4m-2 6v2h2v-2"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="logout">
+	    <path  d="M11.08 12.59L13.67 10H4V8h9.67l-2.59-2.59L12.5 4l5 5-5 5-1.42-1.41zM16 0a2 2 0 0 1 2 2v4.67l-2-2V2H2v14h14v-2.67l2-2V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .89.89 0 2 0h14z"></path>
+	  </symbol>	
+	  <!--IconsSideBar-->	      	  	  	  	  
+	</svg>
+	<!--SVG Sprite-->
+	<!--Content Main-->
+	<main class="content--main">
+		<section class="breadcrumbs">
+			<a href="users.html">Users</a> <span>/</span> <a href="newuser.html">CREATING NEW USER</a>
+		</section>
+		<section class="user--new section--content">
+			<form class="form--default">
+				<header class="user--new_header">
+					<figure class="user--new_header-image">
+						<!-- <img ssrc="img/noavatar.png" srcset="img/noavatar@2x.png 2x, img/noavatar@3x.png 3x" alt="Avatar"> -->
+					</figure>
+					<div class="user--new_header-text">
+						<button class="btns add-photo_btn">add PHOTO</button>
+						<button class="btns delete-photo_btn">DELETE PHOTO</button>
+					</div>
+				</header>
+				<div class="user--new_content">
+					<div class="form--column">
+						<h2 class="form--title2">ACCOUNT</h2>
+						<div class="form--row">
+							<label class="form--label" for="businessname">Business Name</label>
+							<input class="form--input" id="businessname" type="text" name="businessname" value="" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="phonenumber">Phone Number</label>
+							<input class="form--input" id="phonenumber" type="text" name="phonenumber" value="" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="useremail">EMAIL</label>
+							<input class="form--input" id="useremail" type="email" name="useremail" value="" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="companyname">Company name</label>
+							<input class="form--input" id="companyname" type="text" name="companyname" value="" placeholder="">
+						</div>
+					</div>
+					<div class="form--column">
+						<h2 class="form--title2">&nbsp;</h2>
+						<div class="form--row">
+							<label class="form--label" for="billingaddress">Billing address</label>
+							<input class="form--input" id="billingaddress" type="text" name="billingaddress" value="" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="numbers">VAT number/ CRO number</label>
+							<input class="form--input" id="numbers" type="text" name="numbers" value="" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="companyid">Company ID</label>
+							<input class="form--input" id="companyid" type="text" name="companyid" value="" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="companyabout">About the Company</label>
+							<input class="form--input" id="companyabout" type="text" name="companyabout" value="" placeholder="">
+						</div>
+					</div>
+					<div class="form--column">
+						<h2 class="form--title2">Password</h2>
+						<div class="form--row">
+							<label class="form--label" for="password">PASSWORD</label>
+							<input class="form--input" id="password" type="password" name="password" value="" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="repassword">CONFIRM PASSWORD</label>
+							<input class="form--input" id="repassword" type="password" name="repassword" value="" placeholder="">
+						</div>
+					</div>
+					<div class="form--row form--row_submit">
+						<buttons class="btns reset_btn">CANCEL</buttons>
+						<buttons class="btns submit_btn">Add new user</buttons>
+					</div>
+				</div>
+			</form>
+		</section>
+	</main>
+	<!--/Content Main-->
+	<!--Sidebar Main-->	
+	<aside class="sidebar--main">
+		<div class="sidebar--logo">
+			<a class="btns" href="index.html" title="home"><i class="logo"></i></a>
+		</div>
+		<ul class="sidebar--menu">
+			<li class="active">
+				<a class="btns" href="users.html" title="Users">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#users"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="offers.html" title="Offers">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#offers"></use>
+					</svg>					
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="stats.html" title="Stats">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#stats"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="reports.html" title="Reports">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#reports"></use>
+					</svg>
+				</a>
+				<span>!</span>
+			</li>
+			<li class="separator">
+			</li>
+			<li>
+				<a class="btns" href="#" title="Logout">
+					<svg class="icons icons48x48 logout">
+					  <use xlink:href="#logout"></use>
+					</svg>				
+				</a>
+			</li>
+		</ul> 
+	</aside>
+	<!--/Sidebar Main-->
+	<!--Footer Main-->		
+	<footer class="footer--main clearfix">
+		<div class="footer--copyrights">
+			© 2019 LocalFirst All rights reserved.
+		</div>
+		<div class="footer--development">
+			Design and Developed by <a class="footer--logo_devensis" href="#"></a>
+		</div>
+	</footer>
+	<!--/Footer Main-->		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

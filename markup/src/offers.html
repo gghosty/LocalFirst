@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en"><html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<title>LocalFirst Offers</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<!--SVG Sprite-->
+	<svg width="0" height="0" class="hidden">
+		<!--IconsSideBar-->
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="users">
+	    <path fill-rule="evenodd" d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM5.5 8A2.5 2.5 0 0 0 3 10.5c0 .94.53 1.75 1.29 2.18.36.2.77.32 1.21.32.44 0 .85-.12 1.21-.32.37-.21.68-.51.91-.87A5.42 5.42 0 0 1 6.5 8.5v-.28c-.3-.14-.64-.22-1-.22zm13 0c-.36 0-.7.08-1 .22v.28c0 1.2-.39 2.36-1.12 3.31.12.19.25.34.4.49a2.482 2.482 0 0 0 1.72.7c.44 0 .85-.12 1.21-.32.76-.43 1.29-1.24 1.29-2.18A2.5 2.5 0 0 0 18.5 8zM12 14c-2.34 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.66-3.5-7-3.5zm-7.29.55C2.78 14.78 0 15.76 0 17.5V19h3v-1.93c0-1.01.69-1.85 1.71-2.52zm14.58 0c1.02.67 1.71 1.51 1.71 2.52V19h3v-1.5c0-1.74-2.78-2.72-4.71-2.95zM12 16c1.53 0 3.24.5 4.23 1H7.77c.99-.5 2.7-1 4.23-1z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="offers">
+	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stats">
+	    <path  fill-rule="evenodd" d="M3 14l.5.07L8.07 9.5a1.95 1.95 0 0 1 .52-1.91c.78-.79 2.04-.79 2.82 0 .53.52.7 1.26.52 1.91l2.57 2.57.5-.07c.18 0 .35 0 .5.07l3.57-3.57C19 8.35 19 8.18 19 8a2 2 0 1 1 2 2c-.18 0-.35 0-.5-.07l-3.57 3.57c.07.15.07.32.07.5a2 2 0 1 1-4 0l.07-.5-2.57-2.57c-.32.07-.68.07-1 0L4.93 15.5 5 16a2 2 0 1 1-2-2z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="reports">
+	    <path  fill-rule="evenodd" d="M12 3L1 22h22M12 7l7.53 13H4.47M11 11v4h2v-4m-2 6v2h2v-2"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="logout">
+	    <path  d="M11.08 12.59L13.67 10H4V8h9.67l-2.59-2.59L12.5 4l5 5-5 5-1.42-1.41zM16 0a2 2 0 0 1 2 2v4.67l-2-2V2H2v14h14v-2.67l2-2V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .89.89 0 2 0h14z"></path>
+	  </symbol>	
+	  <!--IconsSideBar-->	
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="search">
+	    <path fill-rule="evenodd" d="M6.5 0A6.5 6.5 0 0 1 13 6.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 6.5 13a6.5 6.5 0 1 1 0-13zm0 2C4 2 2 4 2 6.5S4 11 6.5 11 11 9 11 6.5 9 2 6.5 2z"></path>
+	  </symbol>	 
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="search-clear">
+	    <path fill-rule="evenodd" d="M10 0c5.53 0 10 4.47 10 10s-4.47 10-10 10S0 15.53 0 10 4.47 0 10 0zm3.59 5L10 8.59 6.41 5 5 6.41 8.59 10 5 13.59 6.41 15 10 11.41 13.59 15 15 13.59 11.41 10 15 6.41 13.59 5z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" id="export">
+	    <path fill-rule="evenodd" d="M10 0l6 6v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h8zm4 18V7H9V2H2v16h12zm-6-1l-4-4h2.5v-3h3v3H12l-4 4z"></path>
+	  </symbol>  
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" id="filter">
+	    <path fill-rule="evenodd" d="M11.001 16.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-4.01-4.01a.989.989 0 0 1-.29-.83V7.75L.211 1.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4l-4.79 6.13v9.13zM3.041 2l3.96 5.06v5.52l2 2V7.05L12.961 2h-9.92z"></path>
+	  </symbol>
+	  <symbol viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg" id="filter_off">
+	    <title>800E0EB6-B40B-4C55-BF08-7F63E16D5BCD</title>
+	    <path fill-rule="evenodd" d="M12.731 17.83l2.85-2.83-2.85-2.83 1.42-1.41 2.85 2.81 2.8-2.81 1.42 1.41-2.81 2.83 2.81 2.83-1.42 1.41-2.8-2.84-2.85 2.84-1.42-1.41zm-1.73-.95c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-4.01-4.01a.989.989 0 0 1-.29-.83V7.75L.211 1.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4l-4.79 6.13v9.13zM3.041 2l3.96 5.06v5.52l2 2V7.05L12.961 2h-9.92z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="date">
+	    <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" opacity=".7"></path>
+	  </symbol>
+	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="delete">
+	    <title>ACB6416B-36A8-4769-8C75-7D6F932FB1E9</title>
+	    <path fill-rule="evenodd" d="M14 27a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V15H14v12zm2.46-7.12l1.41-1.41L20 20.59l2.12-2.12 1.41 1.41L21.41 22l2.12 2.12-1.41 1.41L20 23.41l-2.12 2.12-1.41-1.41L18.59 22l-2.13-2.12zM23.5 12l-1-1h-5l-1 1H13v2h14v-2h-3.5z"></path>
+	  </symbol>
+	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="edit">
+	    <title>F10563FC-FDE4-4468-9455-B685DC5959EC</title>
+	    <path fill-rule="evenodd" d="M28.71 15.043c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83zM11 25.253v3.75h3.75l11.06-11.07-3.75-3.75L11 25.252z"></path>
+	  </symbol>	  
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="sort-a-z">
+	    <path d="M13.5 15H16l-3.5 3.5L9 15h2.5V6h2z"></path>
+	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="sort-z-a">
+	    <path d="M11.5 9.5H9L12.5 6 16 9.5h-2.5v9h-2z"></path>
+	  </symbol>
+	</svg>
+	<!--SVG Sprite-->
+	<!--Content Main-->
+	<main class="content--main">
+		<div>
+		  <ul class="tabs--btns">
+		    <li class="ui-state-active"><span class="btns" >Offers</span></li>
+		  </ul>
+		  <div>
+		  	<div class="tabs--header clearfix">
+		  		<div class="tabs--header_search clearfix">
+		  			<button  class="tabs--header_search-show">
+		  				<svg class="icons icons24x24">
+								<use xlink:href="#search"></use>
+							</svg>
+			  		</button>
+			  		<form class="tabs--header_search-form">
+			  			<input class="tabs--header_search-input" type="text" name="search" placeholder="Search for offers">
+			  			<button class="tabs--header_search-submit" type="submit" value="">
+			  				<svg class="icons icons24x24">
+	  							<use xlink:href="#search"></use>
+								</svg>
+							</button>
+							<button  class="tabs--header_search-clear">
+								<svg class="icons icons24x24">
+							  	<use xlink:href="#search-clear"></use>
+								</svg>
+							</button>
+			  		</form>
+			  		<div class="tabs--header_search-count">
+			  			259 Offers
+			  		</div>
+		  		</div>
+		  		<div class="tabs--header_menu">
+		  			<ul>
+		  				<li>
+		  					<button class="btns export_btn">
+			  					<svg class="icons icons24x24">
+	  								<use xlink:href="#export"></use>
+									</svg>
+		  					</button>
+							</li>
+		  			</ul>
+		  		</div>		  		
+		  	</div>
+		  	<div class="table--list offers--tables">
+		  		<div class="table--list_header">
+		  			<div class="table--list_row">
+		  				<div class="table--list_cell cell_title">
+			    			<button class="btns">
+				    			TITLE
+				    			<svg class="icons icons24x24">
+	  								<use xlink:href="#sort-a-z"></use>
+									</svg>
+			    			</button>
+							</div>
+			    		<div class="table--list_cell cell_type">
+			    			<button class="btns">
+			    				type of advert
+				    			<svg class="icons icons24x24">
+	  								<use xlink:href="#sort-a-z"></use>
+									</svg>
+			    			</button>
+			    		</div>
+			    		<div class="table--list_cell cell_duration">
+			    			<button class="btns">
+			    				Duration
+				    			<svg class="icons icons24x24">
+	  								<use xlink:href="#sort-a-z"></use>
+									</svg>
+			    			</button>
+			    		</div>
+			    		<div class="table--list_cell cell_company">
+			    			<button class="btns">
+			    				Company
+				    			<svg class="icons icons24x24">
+	  								<use xlink:href="#sort-a-z"></use>
+									</svg>
+			    			</button>
+			    		</div>
+			    		<div class="table--list_cell cell_status">
+			    			<button class="btns">
+			    				Status 
+				    			<svg class="icons icons24x24">
+	  								<use xlink:href="#sort-a-z"></use>
+									</svg>
+			    			</button>
+			    		</div>
+			    		<div class="table--list_cell cell--filter">
+			    			<button class="btns filter_btn">
+				    			<svg class="icons icons24x24 on">
+		  							<use xlink:href="#filter"></use>
+									</svg>
+				    			<svg class="icons icons24x24 off">
+		  							<use xlink:href="#filter_off"></use>
+									</svg>
+			    			</button>
+			    		</div>
+		  			</div>
+			    	<div class="table--list_row filter-row">
+			    		<div class="table--list_cell cell_title">
+							</div>
+			    		<div class="table--list_cell cell_type">
+			    		</div>
+			    		<div class="table--list_cell cell_duration">
+			    			<button class="btns datepicker_btn on">
+			    				<svg class="icons icons24x24">
+									  <use xlink:href="#date"></use>
+									</svg>
+									aLL
+			    			</button>
+			    			<input type='text' data-range="true" data-multiple-dates-separator=" - " class="datepicker-here filter--form_input" name="daterange">
+			    			<button class="btns datepicker_btn off">
+			    				<svg class="icons icons24x24">
+									  <use xlink:href="#search-clear"></use>
+									</svg>
+			    			</button>
+			    		</div>
+			    		<div class="table--list_cell cell_company">
+			    		</div>
+			    		<div class="table--list_cell cell_status">
+			    		</div>
+			    		<div class="table--list_cell cell--filter">
+			    		</div>
+			    	</div>
+		  		</div>
+		  		<div class="table--list_body">
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Unpublish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Publish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>	
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY»  OUT 2.0</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Unpublish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday !!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Publish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>	
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF  BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Unpublish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Publish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>	
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!!  «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Unpublish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Publish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>	
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Unpublish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title"> 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Publish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>	
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Unpublish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>
+			    	<div class="table--list_row offers--table_offer">
+			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
+			    		<div class="table--list_cell cell_type">Local business</div>
+			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
+			    		<div class="table--list_cell cell_company">Best Business Name</div>
+			    		<div class="table--list_cell cell_status">Publish</div>
+			    		<div class="table--list_cell cell--editor">
+			    			<ul class="cell--editor_menu">
+									<li>
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    				<svg class="icons icons40x40">
+		  									<use xlink:href="#delete"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<a href="offeredit.html" class="btns edit_btn">
+											<svg class="icons icons40x40">
+		  									<use xlink:href="#edit"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+			    		</div>		    						    		
+			    	</div>	  			
+		  		</div>
+		  	</div>
+		  </div>
+		</div>
+	</main>
+	<!--/Content Main-->
+	<!--Sidebar Main-->	
+	<aside class="sidebar--main">
+		<div class="sidebar--logo">
+			<a class="btns" href="index.html" title="home"><i class="logo"></i></a>
+		</div>
+		<ul class="sidebar--menu">
+			<li>
+				<a class="btns" href="users.html" title="Users">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#users"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="active">
+				<a class="btns" href="offers.html" title="Offers">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#offers"></use>
+					</svg>					
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="stats.html" title="Stats">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#stats"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="btns" href="reports.html" title="Reports">
+					<svg class="icons icons48x48">
+					  <use xlink:href="#reports"></use>
+					</svg>
+				</a>
+				<span>!</span>
+			</li>
+			<li class="separator">
+			</li>
+			<li>
+				<a class="btns" href="#" title="Logout">
+					<svg class="icons icons48x48 logout">
+					  <use xlink:href="#logout"></use>
+					</svg>				
+				</a>
+			</li>
+		</ul> 
+	</aside>
+	<!--/Sidebar Main-->	
+	<!--Footer Main-->		
+	<footer class="footer--main clearfix">
+		<div class="footer--copyrights">
+			© 2019 LocalFirst All rights reserved.
+		</div>
+		<div class="footer--development">
+			Design and Developed by <a class="footer--logo_devensis" href="#"></a>
+		</div>
+	</footer>
+	<!--/Footer Main-->
+	<!--Popups-->
+	<section id="popups" class="popup--main">
+		<div class="popup_overlay"></div>
+		<div class="popup_block popup--offerdelete">
+			<div class="popup--title">
+				Are you sure to delete topic
+			</div>
+			<form class="form--default">
+				<div class="popup--content text warning">
+					Photodynamic Therapy House Dev ‘19
+				</div>
+				<div class="form--row form--row_submit">
+					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">CANCEL</buttons>
+					<buttons class="btns delete_btn">DELETE</buttons>
+				</div>
+			</form>
+		</div>
+	</section>
+	<!--Popups-->	
+	<!--Scripts-->	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/datepicker.min.js"></script>
+	<script type="text/javascript">
+		$.fn.datepicker.language['ru'] =  {
+	    days: ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+	    daysShort: ['S','M','T','W','T','F','S'],
+	    daysMin: ['S','M','T','W','T','F','S'],
+	    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+	    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+	    today: 'Today',
+	    clear: 'Clear',
+	    dateFormat: 'dd.mm.yy',
+	    timeFormat: 'hh:ii',
+	    firstDay: 1
+		};
+	</script>	
+	<script src="js/scripts.js"></script>
+	<script>
+	  $('.datepicker-here').datepicker({
+    	clearButton: true
+		})
+  </script>	
+	<!--/Scripts-->		
+</body>
+</html>

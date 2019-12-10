@@ -37,13 +37,6 @@ $(function() {
   });
 });
 
-//Actions
-// $(function() {
-//   $(".users--tables .show--actions_btn").click(function(e) {
-//     e.stopPropagation();
-//     $(this).parent().parent().toggleClass("show-actions");
-//   });
-// });
 
 //Filter 
 $(function() {
@@ -66,6 +59,14 @@ $(function() {
   $(".report--topic_item-btns").click(function(e) {
     e.preventDefault();
     $(this).parents('.report--topic_item').toggleClass("show-menu");
+  });
+});
+
+//Filter 
+$(function() {
+  $(".filter-row .datepicker_btn").click(function(e) {
+    e.preventDefault();
+    $(".filter-row").toggleClass("show-datepicker");
   });
 });
 
