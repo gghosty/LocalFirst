@@ -37,7 +37,6 @@ $(function() {
   });
 });
 
-
 //Filter 
 $(function() {
   $(".filter_btn").click(function(e) {

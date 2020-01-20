@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 	<meta charset="UTF-8">
-	<title>LocalFirst Offers</title>
+	<title>LocalFirst Services</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="users">
 	    <path fill-rule="evenodd" d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM5.5 8A2.5 2.5 0 0 0 3 10.5c0 .94.53 1.75 1.29 2.18.36.2.77.32 1.21.32.44 0 .85-.12 1.21-.32.37-.21.68-.51.91-.87A5.42 5.42 0 0 1 6.5 8.5v-.28c-.3-.14-.64-.22-1-.22zm13 0c-.36 0-.7.08-1 .22v.28c0 1.2-.39 2.36-1.12 3.31.12.19.25.34.4.49a2.482 2.482 0 0 0 1.72.7c.44 0 .85-.12 1.21-.32.76-.43 1.29-1.24 1.29-2.18A2.5 2.5 0 0 0 18.5 8zM12 14c-2.34 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.66-3.5-7-3.5zm-7.29.55C2.78 14.78 0 15.76 0 17.5V19h3v-1.93c0-1.01.69-1.85 1.71-2.52zm14.58 0c1.02.67 1.71 1.51 1.71 2.52V19h3v-1.5c0-1.74-2.78-2.72-4.71-2.95zM12 16c1.53 0 3.24.5 4.23 1H7.77c.99-.5 2.7-1 4.23-1z"></path>
 	  </symbol>
-	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="offers">
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="services">
 	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stats">
@@ -37,7 +37,10 @@
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" id="export">
 	    <path fill-rule="evenodd" d="M10 0l6 6v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h8zm4 18V7H9V2H2v16h12zm-6-1l-4-4h2.5v-3h3v3H12l-4 4z"></path>
-	  </symbol>  
+	  </symbol> 
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="plus">
+	    <path fill-rule="evenodd" d="M14 8H8v6H6V8H0V6h6V0h2v6h6z"></path>
+	  </symbol> 
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" id="filter">
 	    <path fill-rule="evenodd" d="M11.001 16.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-4.01-4.01a.989.989 0 0 1-.29-.83V7.75L.211 1.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4l-4.79 6.13v9.13zM3.041 2l3.96 5.06v5.52l2 2V7.05L12.961 2h-9.92z"></path>
 	  </symbol>
@@ -68,7 +71,7 @@
 	<main class="content--main">
 		<div>
 		  <ul class="tabs--btns">
-		    <li class="ui-state-active"><span class="btns" >Offers</span></li>
+		    <li class="ui-state-active"><span class="btns">Services</span></li>
 		  </ul>
 		  <div>
 		  	<div class="tabs--header clearfix">
@@ -79,7 +82,7 @@
 							</svg>
 			  		</button>
 			  		<form class="tabs--header_search-form">
-			  			<input class="tabs--header_search-input" type="text" name="search" placeholder="Search for offers">
+			  			<input class="tabs--header_search-input" type="text" name="search" placeholder="Search for services">
 			  			<button class="tabs--header_search-submit" type="submit" value="">
 			  				<svg class="icons icons24x24">
 	  							<use xlink:href="#search"></use>
@@ -92,9 +95,9 @@
 							</button>
 			  		</form>
 			  		<div class="tabs--header_search-count">
-			  			259 Offers
+			  			59 Services
 			  		</div>
-		  		</div>
+		  		</div>	 
 		  		<div class="tabs--header_menu">
 		  			<ul>
 		  				<li>
@@ -104,10 +107,17 @@
 									</svg>
 		  					</button>
 							</li>
+		  				<li>
+		  					<button class="btns addservice_btn" data-toggle="class" data-target="#popups" data-classes="serviceadd">
+			  					<svg class="icons icons24x24">
+	  								<use xlink:href="#plus"></use>
+									</svg>
+		  					</button>
+							</li>
 		  			</ul>
-		  		</div>		  		
+		  		</div> 		
 		  	</div>
-		  	<div class="table--list offers--tables">
+		  	<div class="table--list services--tables">
 		  		<div class="table--list_header">
 		  			<div class="table--list_row">
 		  				<div class="table--list_cell cell_title">
@@ -118,369 +128,253 @@
 									</svg>
 			    			</button>
 							</div>
-			    		<div class="table--list_cell cell_type">
-			    			<button class="btns">
-			    				type of advert
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-a-z"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_duration">
-			    			<button class="btns">
-			    				Duration
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-a-z"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_company">
-			    			<button class="btns">
-			    				Company
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-a-z"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_status">
-			    			<button class="btns">
-			    				Status 
-				    			<svg class="icons icons24x24">
-	  								<use xlink:href="#sort-a-z"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell--filter">
-			    			<button class="btns filter_btn">
-				    			<svg class="icons icons24x24 on">
-		  							<use xlink:href="#filter"></use>
-									</svg>
-				    			<svg class="icons icons24x24 off">
-		  							<use xlink:href="#filter_off"></use>
-									</svg>
-			    			</button>
-			    		</div>
 		  			</div>
-			    	<div class="table--list_row filter-row">
-			    		<div class="table--list_cell cell_title">
-							</div>
-			    		<div class="table--list_cell cell_type">
-			    		</div>
-			    		<div class="table--list_cell cell_duration">
-			    			<button class="btns datepicker_btn on">
-			    				<svg class="icons icons24x24">
-									  <use xlink:href="#date"></use>
-									</svg>
-									aLL
-			    			</button>
-			    			<input type='text' data-range="true" data-multiple-dates-separator=" - " class="datepicker-here filter--form_input" name="daterange">
-			    			<button class="btns datepicker_btn off">
-			    				<svg class="icons icons24x24">
-									  <use xlink:href="#search-clear"></use>
-									</svg>
-			    			</button>
-			    		</div>
-			    		<div class="table--list_cell cell_company">
-			    		</div>
-			    		<div class="table--list_cell cell_status">
-			    		</div>
-			    		<div class="table--list_cell cell--filter">
-			    		</div>
-			    	</div>
 		  		</div>
 		  		<div class="table--list_body">
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Unpublish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Publish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>	
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY»  OUT 2.0</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Unpublish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday !!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Publish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>	
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF  BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Unpublish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Publish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>	
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!!  «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Unpublish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Publish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>	
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Unpublish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title"> 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Publish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>	
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Unpublish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
-										</a>
+										</button>
 									</li>
 								</ul>
 			    		</div>		    						    		
 			    	</div>
-			    	<div class="table--list_row offers--table_offer">
+			    	<div class="table--list_row services--table_offer">
 			    		<div class="table--list_cell cell_title">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</div>
-			    		<div class="table--list_cell cell_type">Local business</div>
-			    		<div class="table--list_cell cell_duration">01/10 - 31/12</div>
-			    		<div class="table--list_cell cell_company">Best Business Name</div>
-			    		<div class="table--list_cell cell_status">Publish</div>
 			    		<div class="table--list_cell cell--editor">
 			    			<ul class="cell--editor_menu">
 									<li>
-					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+					    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">
 					    				<svg class="icons icons40x40">
 		  									<use xlink:href="#delete"></use>
 											</svg>
 										</button>
 									</li>
 									<li>
-										<a href="offeredit.html" class="btns edit_btn">
+										<button class="btns edit_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">
 											<svg class="icons icons40x40">
 		  									<use xlink:href="#edit"></use>
 											</svg>
@@ -508,10 +402,10 @@
 					</svg>
 				</a>
 			</li>
-			<li class="active">
-				<a class="btns" href="offers.html" title="Offers">
+			<li>
+				<a class="btns" href="services.html" title="services">
 					<svg class="icons icons48x48">
-					  <use xlink:href="#offers"></use>
+					  <use xlink:href="#services"></use>
 					</svg>					
 				</a>
 			</li>
@@ -530,7 +424,7 @@
 				</a>
 				<span>!</span>
 			</li>
-			<li>
+			<li class="active">
 				<a class="btns" href="services.html" title="Services">
 					<svg class="icons icons48x48">
 					  <use xlink:href="#services"></use>
@@ -562,16 +456,44 @@
 	<!--Popups-->
 	<section id="popups" class="popup--main">
 		<div class="popup_overlay"></div>
-		<div class="popup_block popup--offerdelete">
+		<div class="popup_block popup--serviceadd">
 			<div class="popup--title">
-				Are you sure to delete topic
+				New service
+			</div>
+			<form class="form--default">
+				<div class="form--row popup--content">
+					<input type="text" class="popup--content_input" placeholder="Enter Service Name">
+				</div>
+				<div class="form--row form--row_submit">
+					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="serviceadd">CANCEL</buttons>
+					<buttons class="btns submit_btn">Add</buttons>
+				</div>
+			</form>
+		</div>
+		<div class="popup_block popup--serviceedit">
+			<div class="popup--title">
+				Edit service
+			</div>
+			<form class="form--default">
+				<div class="form--row popup--content">
+					<input type="text" class="popup--content_input" value="Photodynamic Therapy House Dev ‘19">
+				</div>
+				<div class="form--row form--row_submit">
+					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="serviceedit">CANCEL</buttons>
+					<buttons class="btns submit_btn">Save</buttons>
+				</div>
+			</form>
+		</div>
+		<div class="popup_block popup--servicedelete">
+			<div class="popup--title">
+				Are you sure to delete service
 			</div>
 			<form class="form--default">
 				<div class="popup--content text warning">
 					Photodynamic Therapy House Dev ‘19
 				</div>
 				<div class="form--row form--row_submit">
-					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">CANCEL</buttons>
+					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="servicedelete">CANCEL</buttons>
 					<buttons class="btns delete_btn">DELETE</buttons>
 				</div>
 			</form>
@@ -580,27 +502,7 @@
 	<!--Popups-->	
 	<!--Scripts-->	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/datepicker.min.js"></script>
-	<script type="text/javascript">
-		$.fn.datepicker.language['ru'] =  {
-	    days: ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-	    daysShort: ['S','M','T','W','T','F','S'],
-	    daysMin: ['S','M','T','W','T','F','S'],
-	    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-	    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-	    today: 'Today',
-	    clear: 'Clear',
-	    dateFormat: 'dd.mm.yy',
-	    timeFormat: 'hh:ii',
-	    firstDay: 1
-		};
-	</script>	
 	<script src="js/scripts.js"></script>
-	<script>
-	  $('.datepicker-here').datepicker({
-    	clearButton: true
-		})
-  </script>	
 	<!--/Scripts-->		
 </body>
 </html>

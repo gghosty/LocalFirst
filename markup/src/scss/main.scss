@@ -453,6 +453,10 @@ $color-blue: #1177ee;
 			}	
 		}
 
+		span.btns {
+			cursor: default;
+		}
+
 		.notifications {
 			position: absolute;
 			top: -8px;
@@ -631,7 +635,7 @@ $color-blue: #1177ee;
 .tabs--header_menu {
 	float: right;
 
-	 ul {
+	ul {
 		list-style: none;
 
 		li {
@@ -667,7 +671,7 @@ $color-blue: #1177ee;
 		} 
 	}
 
-	 .verify-all_btn {
+	.verify-all_btn {
 		padding: 18px 6px;
 	}
 }
@@ -822,6 +826,13 @@ $color-blue: #1177ee;
 			  background-color: rgba(0,0,0,0.04);
 			}
 		}	
+
+		&-total {
+		  opacity: 0.5;
+		  font-size: 12px;
+		  font-weight: 500;
+		  color: #000000;
+		}
 
 		.cell--filter .icons.off,
 		&.show-filter .cell--filter .icons.on {
@@ -1483,6 +1494,27 @@ $color-blue: #1177ee;
 	}
 }
 /*Reports*/
+/*Services*/
+.services--tables {
+	.table--list_row {
+		position: relative;
+	}
+
+	.table--list_cell {
+		width: 100%;
+	}
+	.cell--editor {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 14%;
+	}
+
+	.cell--editor_menu {
+		width: 180px;
+	}
+}
+/*Services*/
 /*Content*/
 
 /*SideBar*/
@@ -1685,7 +1717,10 @@ $color-blue: #1177ee;
 		&.show .popup_overlay,
 		&.userdelete .popup--userdelete,
 		&.offerdelete .popup--offerdelete,
-		&.adsdelete .popup--adsdelete  {
+		&.adsdelete .popup--adsdelete,
+		&.serviceadd .popup--serviceadd,
+		&.serviceedit .popup--serviceedit,
+		&.servicedelete .popup--servicedelete {
 			display: block;
 		} 
 	}
