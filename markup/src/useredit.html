@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>LocalFirst Edit User</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/extra.css">
 </head>
 <body>
 	<!--SVG Sprite-->
@@ -38,12 +39,18 @@
 	<!--Content Main-->
 	<main class="content--main">
 		<section class="breadcrumbs">
-			<a href="users.html">Users</a> <span>/</span> <a href="newuser.html">EDIT USER</a>
-			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">
-				<svg class="icons icons40x40">
-					<use xlink:href="#delete"></use>
-				</svg>
-			</button>
+			<a href="users.html">Users</a> <span>/</span> Hotel Boutique Ltd
+		</section>
+		<section class="page--menu clearfix">
+			<ul class="cell--editor_menu">
+				<li>
+    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">
+    				<svg class="icons icons40x40">
+							<use xlink:href="#delete"></use>
+						</svg>
+					</button>
+				</li>
+			</ul>			
 		</section>
 		<section class="user--edit section--content">
 			<form class="form--default">
@@ -60,8 +67,8 @@
 					<div class="form--column">
 						<h2 class="form--title2">ACCOUNT</h2>
 						<div class="form--row">
-							<label class="form--label" for="businessname">Business Name</label>
-							<input class="form--input" id="businessname" type="text" name="businessname" value="Kimmy" placeholder="">
+							<label class="form--label" for="businessname">COMPANY/TRADING NAME</label>
+							<input class="form--input" id="businessname" type="text" name="businessname" value="Hotel Boutique Ltd" placeholder="">
 						</div>
 						<div class="form--row">
 							<label class="form--label" for="phonenumber">Phone Number</label>
@@ -72,27 +79,55 @@
 							<input class="form--input" id="useremail" type="email" name="useremail" value="Kimmy@localfirst.com" placeholder="">
 						</div>
 						<div class="form--row">
-							<label class="form--label" for="companyname">Company name</label>
-							<input class="form--input" id="companyname" type="text" name="companyname" value="kimmmic" placeholder="">
+							<label class="form--label" for="businessaddress">BUSINESS ADDRESS</label>
+							<input class="form--input" id="businessaddress" type="text" name="businessaddress" value="613 Erivor Highway" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="eircode">EIRCODE</label>
+							<input class="form--input" id="eircode" type="text" name="eircode" value="6373829" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="url">WEBSITE</label>
+							<input class="form--input" id="url" type="text" name="url" value="www.wayne.com" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="sdescription">A SHORT DESCRIPTION OF YOUR BUSINESS</label>
+							<input class="form--input" id="sdescription" type="text" name="sdescription" value="The rules of travel have altered so much in the last few years, with strict regulation regarding air travel, questionable car searches that may vary in regulation from state to state." placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="servicetypes">SERVICE TYPES</label>
+							<input class="form--input" id="servicetypes" type="text" name="servicetypes" value="Abrasives" placeholder="">
 						</div>
 					</div>
 					<div class="form--column">
-						<h2 class="form--title2">&nbsp;</h2>
+						<h2 class="form--title2">BILLING INFORMATION</h2>
 						<div class="form--row">
-							<label class="form--label" for="billingaddress">Billing address</label>
-							<input class="form--input" id="billingaddress" type="text" name="billingaddress" value="Nantes" placeholder="">
+							<label class="form--label" for="regnumber">COMPANY/ORGANISATION REGISTRATION NUMBER</label>
+							<input class="form--input" id="regnumber" type="text" name="regnumber" value="Nantes" placeholder="">
 						</div>
 						<div class="form--row">
 							<label class="form--label" for="numbers">VAT number/ CRO number</label>
 							<input class="form--input" id="numbers" type="text" name="numbers" value="66363282947" placeholder="">
 						</div>
 						<div class="form--row">
-							<label class="form--label" for="companyid">Company ID</label>
-							<input class="form--input" id="companyid" type="text" name="companyid" value="67483920273" placeholder="">
+							<label class="form--label" for="contactname">CONTACT NAME</label>
+							<input class="form--input" id="contactname" type="text" name="contactname" value="Cornelia Baldwin" placeholder="">
 						</div>
 						<div class="form--row">
-							<label class="form--label" for="companyabout">About the Company</label>
-							<input class="form--input" id="companyabout" type="text" name="companyabout" value="Service provider could change " placeholder="">
+							<label class="form--label" for="contactphone">CONTACT PHONE NUMBER</label>
+							<input class="form--input" id="contactphone" type="text" name="contactphone" value="+4 3322355" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="contactemail">CONTACT EMAIL ADDRESS</label>
+							<input class="form--input" id="contactemail" type="text" name="contactemail" value="zipsedbu@ajausruv.edu" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="billingaddress">Billing address</label>
+							<input class="form--input" id="billingaddress" type="text" name="billingaddress" value="613 Erivor Highway" placeholder="">
+						</div>
+						<div class="form--row">
+							<label class="form--label" for="billingeircode">BILLING EIRCODE</label>
+							<input class="form--input" id="billingeircode" type="text" name="billingeircode" value="102938" placeholder="">
 						</div>
 					</div>
 					<div class="form--column">
@@ -116,68 +151,12 @@
 	</main>
 	<!--/Content Main-->
 	<!--Sidebar Main-->	
-	<aside class="sidebar--main">
-		<div class="sidebar--logo">
-			<a class="btns" href="index.html" title="home"><i class="logo"></i></a>
-		</div>
-		<ul class="sidebar--menu">
-			<li class="active">
-				<a class="btns" href="users.html" title="Users">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#users"></use>
-					</svg>
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="offers.html" title="Offers">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#offers"></use>
-					</svg>					
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="stats.html" title="Stats">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#stats"></use>
-					</svg>
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="reports.html" title="Reports">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#reports"></use>
-					</svg>
-				</a>
-				<span>!</span>
-			</li>
-			<li>
-				<a class="btns" href="services.html" title="Services">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#services"></use>
-					</svg>
-				</a>
-			</li>
-			<li class="separator">
-			</li>
-			<li>
-				<a class="btns" href="#" title="Logout">
-					<svg class="icons icons48x48 logout">
-					  <use xlink:href="#logout"></use>
-					</svg>				
-				</a>
-			</li>
-		</ul> 
-	</aside>
-	<!--/Sidebar Main-->
+	@@include('./_sidebar.html',{
+		'users': 'active'
+	})
+	<!--/Sidebar Main-->	
 	<!--Footer Main-->		
-	<footer class="footer--main clearfix">
-		<div class="footer--copyrights">
-			© 2019 LocalFirst All rights reserved.
-		</div>
-		<div class="footer--development">
-			Design and Developed by <a class="footer--logo_devensis" href="#"></a>
-		</div>
-	</footer>
+	@@include('./_footer.html')
 	<!--/Footer Main-->		
 	<!--Popups-->
 	<section id="popups" class="popup--main">

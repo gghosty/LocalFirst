@@ -13,6 +13,9 @@
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="users">
 	    <path fill-rule="evenodd" d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM5.5 8A2.5 2.5 0 0 0 3 10.5c0 .94.53 1.75 1.29 2.18.36.2.77.32 1.21.32.44 0 .85-.12 1.21-.32.37-.21.68-.51.91-.87A5.42 5.42 0 0 1 6.5 8.5v-.28c-.3-.14-.64-.22-1-.22zm13 0c-.36 0-.7.08-1 .22v.28c0 1.2-.39 2.36-1.12 3.31.12.19.25.34.4.49a2.482 2.482 0 0 0 1.72.7c.44 0 .85-.12 1.21-.32.76-.43 1.29-1.24 1.29-2.18A2.5 2.5 0 0 0 18.5 8zM12 14c-2.34 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.66-3.5-7-3.5zm-7.29.55C2.78 14.78 0 15.76 0 17.5V19h3v-1.93c0-1.01.69-1.85 1.71-2.52zm14.58 0c1.02.67 1.71 1.51 1.71 2.52V19h3v-1.5c0-1.74-2.78-2.72-4.71-2.95zM12 16c1.53 0 3.24.5 4.23 1H7.77c.99-.5 2.7-1 4.23-1z"></path>
 	  </symbol>
+	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="offers">
+	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
+	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="services">
 	    <path fill-rule="evenodd" d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14zm0 14V8H5v10h14z"></path>
 	  </symbol>
@@ -390,69 +393,13 @@
 	</main>
 	<!--/Content Main-->
 	<!--Sidebar Main-->	
-	<aside class="sidebar--main">
-		<div class="sidebar--logo">
-			<a class="btns" href="index.html" title="home"><i class="logo"></i></a>
-		</div>
-		<ul class="sidebar--menu">
-			<li>
-				<a class="btns" href="users.html" title="Users">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#users"></use>
-					</svg>
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="services.html" title="services">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#services"></use>
-					</svg>					
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="stats.html" title="Stats">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#stats"></use>
-					</svg>
-				</a>
-			</li>
-			<li>
-				<a class="btns" href="reports.html" title="Reports">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#reports"></use>
-					</svg>
-				</a>
-				<span>!</span>
-			</li>
-			<li class="active">
-				<a class="btns" href="services.html" title="Services">
-					<svg class="icons icons48x48">
-					  <use xlink:href="#services"></use>
-					</svg>
-				</a>
-			</li>
-			<li class="separator">
-			</li>
-			<li>
-				<a class="btns" href="#" title="Logout">
-					<svg class="icons icons48x48 logout">
-					  <use xlink:href="#logout"></use>
-					</svg>				
-				</a>
-			</li>
-		</ul> 
-	</aside>
+	@@include('./_sidebar.html',{
+		'services': 'active'
+	})
 	<!--/Sidebar Main-->	
 	<!--Footer Main-->		
-	<footer class="footer--main clearfix">
-		<div class="footer--copyrights">
-			© 2019 LocalFirst All rights reserved.
-		</div>
-		<div class="footer--development">
-			Design and Developed by <a class="footer--logo_devensis" href="#"></a>
-		</div>
-	</footer>
-	<!--/Footer Main-->
+	@@include('./_footer.html')
+	<!--/Footer Main-->	
 	<!--Popups-->
 	<section id="popups" class="popup--main">
 		<div class="popup_overlay"></div>

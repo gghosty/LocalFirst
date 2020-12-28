@@ -13,11 +13,12 @@ var plumber = require('gulp-plumber'); // Checks Errors In SCSS
 var htmlmin = require('gulp-htmlmin'); // Minimize HTML
 var cssnano = require('gulp-cssnano'); // Minimize CSS
 var minify = require('gulp-minify');   //Minimize JS
+var fileinclude = require('gulp-file-include');   //Include File In HTML
 
-gulp.task('insertCSS', function() { 
-	// del('markup/build/index.html');   
-	return gulp.src('markup/src/**/*.html')
-  .pipe(gulp.dest('markup/build/**/*.html'));
+gulp.task('css', function() {    
+	return gulp.src('markup/src/css/*.*')
+	.pipe(newer('markup/build/css/'))
+  .pipe(gulp.dest('markup/build/css/'));
 });
 
 
@@ -44,7 +45,8 @@ gulp.task('scss', function() {
 
 //Task HTML
 gulp.task('html', function() {
-	return gulp.src('markup/src/**/*.html')
+	return gulp.src(['markup/src/**/*.html','!markup/src/**/_*.html'])
+	.pipe(fileinclude())
 	.pipe(newer('markup/build/'))
 	//.pipe(htmlmin({ collapseWhitespace: true })) //Mini	
 	.pipe(gulp.dest('markup/build/'));
@@ -79,6 +81,7 @@ gulp.task('fonts', function() {
 //Task Watch for channges img, scss, js, html
 gulp.task('watchs', function() {
 	gulp.watch('markup/src/img/**/*.*', ['img']);
+	gulp.watch('markup/src/css/**/*.*', ['css']);
 	gulp.watch('markup/src/**/*.scss', ['scss']);
 	gulp.watch('markup/src/**/*.js', ['js']);
 	gulp.watch('markup/src/**/*.html', ['html']);
@@ -97,4 +100,4 @@ gulp.task('server', function() {
 
 
 //Run Server width Watch
-gulp.task('watch', gulpSequence('del_build', 'scss', 'html', 'img', 'js', 'fonts', ['watchs','server']))
+gulp.task('watch', gulpSequence('del_build', 'scss', 'css', 'html', 'img', 'js', 'fonts', ['watchs','server']))

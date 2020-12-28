@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 	<meta charset="UTF-8">
-	<title>LocalFirst Edit offer</title>
+	<title>LocalFirst User</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/extra.css">
 </head>
@@ -22,14 +22,18 @@
 	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="reports">
 	    <path  fill-rule="evenodd" d="M12 3L1 22h22M12 7l7.53 13H4.47M11 11v4h2v-4m-2 6v2h2v-2"></path>
-	  </symbol>
+	  </symbol>	  
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" id="services">
 	    <path d="M11 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2zM2 8v4h7V8H2zm0 6v4h7v-4H2zM2 2v4h7V2H2zm11 7h3V6h2v3h3v2h-3v3h-2v-3h-3V9z"></path>
-	  </symbol>	  
+	  </symbol>
 	  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="logout">
 	    <path  d="M11.08 12.59L13.67 10H4V8h9.67l-2.59-2.59L12.5 4l5 5-5 5-1.42-1.41zM16 0a2 2 0 0 1 2 2v4.67l-2-2V2H2v14h14v-2.67l2-2V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .89.89 0 2 0h14z"></path>
 	  </symbol>	
 	  <!--IconsSideBar-->	
+	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="edit">
+	    <title>F10563FC-FDE4-4468-9455-B685DC5959EC</title>
+	    <path fill-rule="evenodd" d="M28.71 15.043c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83zM11 25.253v3.75h3.75l11.06-11.07-3.75-3.75L11 25.252z"></path>
+	  </symbol>
 	  <symbol viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="delete">
 	    <title>ACB6416B-36A8-4769-8C75-7D6F932FB1E9</title>
 	    <path fill-rule="evenodd" d="M14 27a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V15H14v12zm2.46-7.12l1.41-1.41L20 20.59l2.12-2.12 1.41 1.41L21.41 22l2.12 2.12-1.41 1.41L20 23.41l-2.12 2.12-1.41-1.41L18.59 22l-2.13-2.12zM23.5 12l-1-1h-5l-1 1H13v2h14v-2h-3.5z"></path>
@@ -39,117 +43,183 @@
 	<!--Content Main-->
 	<main class="content--main">
 		<section class="breadcrumbs">
-			<a href="offers.html">Offers</a> <span>/</span> Holliday Sale!!!
+			<a href="users.html">Users</a> <span>/</span> preview
 		</section>
 		<section class="page--menu clearfix">
 			<ul class="cell--editor_menu">
 				<li>
-    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">
+    			<button class="btns delete_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">
     				<svg class="icons icons40x40">
 							<use xlink:href="#delete"></use>
 						</svg>
 					</button>
 				</li>
+				<li>
+					<a href="useredit.html" class="btns edit_btn">
+						<svg class="icons icons40x40">
+							<use xlink:href="#edit"></use>
+						</svg>
+					</a>
+				</li>
 			</ul>			
 		</section>
-		<section class="offer--edit section--content">
-			<form class="form--default">
-				<header class="offer--edit_header">
-					<figure class="offer--edit_header-image">
-						<img ssrc="img/offer.jpg" srcset="img/offer@2x.jpg 2x, img/offer@3x.jpg 3x" alt="Offer">
-					</figure>
-					<div class="offer--edit_header-text">
-						<button class="btns add-photo_btn">add PHOTO</button>
-						<button class="btns delete-photo_btn">DELETE PHOTO</button>
+		<section class="user--view section--content">
+			<header class="user--view_header">
+				<figure class="user--view_header-image">
+					<img ssrc="img/avatar.png" srcset="img/avatar@2x.png 2x, img/avatar@3x.png 3x" alt="Avatar">
+				</figure>
+				<div class="user--view_header-info">
+					<div class="view--label">
+						COMPANY/TRADING NAME
 					</div>
-				</header>
-				<div class="offer--edit_content">
-					<div class="form--column">
-						<div class="form--row">
-							<label class="form--label" for="offertitle">Choose type of business</label>
-							<input class="form--radio" id="offertype-b" type="radio" name="offertype" value="business" >
-							<label class="form--radio_label" for="offertype-b">Local business</label>
-						</div>
-						<div class="form--row">
-							<input class="form--radio" id="offertype-e" type="radio" name="offertype" value="entertaiment">
-							<label class="form--radio_label" for="offertype-e">Local entertaiment</label>
-						</div>
-						<div class="form--row">
-							<label class="form--label" for="offertitle">Title for the advert</label>
-							<textarea class="form--input" id="offertitle" type="text" name="offertitle" placeholder="">Holliday Sale!!! 60% OFF «PENNY» BLACK OUT 2.0 27"</textarea>
-						</div>
-						<div class="form--row">
-							<label class="form--label" for="offerduration">Duration</label>
-							<input class="form--input datepicker-here" data-range="true" id="offerduration" type="text" name="offerduration" value="11/12/2019" placeholder=""/>
-						</div>
-						<div class="form--row">
-							<label class="form--label" for="offerprice">Prise</label>
-							<input class="form--input"  id="offerprice" type="text" name="offerprice" value="2,500 - 2,589 €" placeholder=""/>
-						</div>
-						<div class="form--row">
-							<label class="form--label" for="offertitle">Enter description</label>
-							<textarea rows="10" class="form--input" id="offertitle" type="text" name="offertitle" placeholder="">We strive everyday to offer you the customer the best service by staying up to date with the latest in Bmx and Skate technology by knowing what parts fit together or where to source a certain part which we may not usually stock, will we try our hardest to find you what you need and provide that at the best price we can.</textarea>
-						</div>
-					</div>
-					<div class="form--row form--row_submit">
-						<buttons class="btns reset_btn">CANCEL</buttons>
-						<buttons class="btns submit_btn">SAVE CHANGES</buttons>
+					<div class="view--text">
+						<p>Hotel Boutique Ltd</p>
 					</div>
 				</div>
-			</form>
+			</header>
+			<div class="user--view_content">
+				<div class="view--column">
+					<h2 class="view--title2">ACCOUNT</h2>
+					<div class="view--label">
+						Phone Number
+					</div>
+					<div class="view--text">
+						<p>+46 789 5523</p>
+					</div>
+					<div class="view--label">
+						Phone Number
+					</div>
+					<div class="view--text">
+						<p>+46 789 5523</p>
+					</div>
+					<div class="view--label">
+						EMAIL
+					</div>
+					<div class="view--text">
+						<p>bawbezra@pico.edu</p>
+					</div>
+					<div class="view--label">
+						BUSINESS ADDRESS
+					</div>
+					<div class="view--text">
+						<p>613 Erivor Highway</p>
+					</div>
+					<div class="view--label">
+						EIRCODE
+					</div>
+					<div class="view--text">
+						<p>6373829</p>
+					</div>
+					<div class="view--label">
+						WEBSITE
+					</div>
+					<div class="view--text">
+						<p>www.wayne.com</p>
+					</div>
+					<div class="view--label">
+						A SHORT DESCRIPTION OF YOUR BUSINESS
+					</div>
+					<div class="view--text">
+						<p>
+							The rules of travel have altered so much in the last few years, with strict regulation regarding air travel, questionable car searches that may vary in regulation from state to state.
+						</p>
+					</div>
+					<div class="view--label">
+						SERVICE TYPES
+					</div>
+					<div class="view--text">
+						<p>
+							Abrasives
+						</p>
+						<p>
+							Accountant
+						</p>
+						<p>
+							Auditor
+						</p>
+					</div>
+				</div>
+				<div class="view--column">
+					<h2 class="view--title2">BILLING INFORMATION</h2>
+					<div class="view--label">
+						COMPANY/ORGANISATION REGISTRATION NUMBER
+					</div>
+					<div class="view--text">
+						<p>555 332 235 532</p>
+					</div>
+					<div class="view--label">
+						VAT number/ CRO number
+					</div>
+					<div class="view--text">
+						<p>66363282947</p>
+					</div>
+					<div class="view--label">
+						CONTACT NAME
+					</div>
+					<div class="view--text">
+						<p>Cornelia Baldwin</p>
+					</div>
+					<div class="view--label">
+						CONTACT PHONE NUMBER
+					</div>
+					<div class="view--text">
+						<p>+4 3322355</p>
+					</div>
+					<div class="view--label">
+						CONTACT EMAIL ADDRESS
+					</div>
+					<div class="view--text">
+						<p>zipsedbu@ajausruv.edu</p>
+					</div>
+					<div class="view--label">
+						Billing address
+					</div>
+					<div class="view--text">
+						<p>613 Erivor Highway</p>
+					</div>
+					<div class="view--label">
+						BILLING EIRCODE
+					</div>
+					<div class="view--text">
+						<p>102938</p>
+					</div>
+					<div class="adds--block">
+						<h2 class="view--title2">Ads info</h2>
+						<buttons class="btns btn-blue show-btn">Show all Ads</buttons>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 	<!--/Content Main-->
 	<!--Sidebar Main-->	
 	@@include('./_sidebar.html',{
-		'offers': 'active'
+		'users': 'active'
 	})
 	<!--/Sidebar Main-->	
 	<!--Footer Main-->		
 	@@include('./_footer.html')
-	<!--/Footer Main-->	
+	<!--/Footer Main-->		
 	<!--Popups-->
 	<section id="popups" class="popup--main">
 		<div class="popup_overlay"></div>
-		<div class="popup_block popup--offerdelete">
+		<div class="popup_block popup--userdelete">
 			<div class="popup--title">
-				Are you sure to delete offer
+				Are you sure to delete user
 			</div>
 			<form class="form--default">
 				<div class="popup--content text warning">
 					Thakurjeet Bharwana?
 				</div>
 				<div class="form--row form--row_submit">
-					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="offerdelete">CANCEL</buttons>
+					<buttons class="btns reset_btn" data-toggle="class" data-target="#popups" data-classes="userdelete">CANCEL</buttons>
 					<buttons class="btns delete_btn">DELeTE</buttons>
 				</div>
 			</form>
 		</div>
 	</section>
 	<!--Popups-->		
-	<!--Scripts-->	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/datepicker.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<script type="text/javascript">
-		$.fn.datepicker.language['ru'] =  {
-	    days: ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-	    daysShort: ['S','M','T','W','T','F','S'],
-	    daysMin: ['S','M','T','W','T','F','S'],
-	    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-	    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-	    today: 'Today',
-	    clear: 'Clear',
-	    dateFormat: 'dd/mm/yyyy',
-	    timeFormat: 'hh:ii',
-	    firstDay: 1
-		};
-	</script>	
-	<script>
-	  $('.datepicker-here').datepicker({
-	  	clearButton: true
-		});
-	</script>	
-	<!--Scripts-->	
 </body>
 </html>
